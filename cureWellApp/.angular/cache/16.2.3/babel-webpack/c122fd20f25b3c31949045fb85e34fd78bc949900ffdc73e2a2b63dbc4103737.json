@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Doctor {}","map":{"version":3,"names":["Doctor"],"sources":["C:\\Users\\ajayan\\source\\repos\\cureWellApp\\src\\app\\shared\\doctor.ts"],"sourcesContent":["export class Doctor {\n    DoctorId:number;\n    DoctorName:string;\n}\n"],"mappings":"AAAA,OAAM,MAAOA,MAAM"},"metadata":{},"sourceType":"module","externalDependencies":[]}

@@ -1,0 +1,49 @@
+<app-nav></app-nav>
+
+
+<div class="container  ">
+
+    <div class="row m-5">
+  
+      <div class="col m-5">
+  
+        <h1 class="text-center text-white"><b>View Specialization</b></h1>
+        <div class="text-center">
+
+            <button class="btn btn-primary" (click)="addSpecialization()">Add Specialization</button>
+
+        </div>
+        <div class="table-responsive mt-5">
+
+<table class="table custom-table">
+
+    <thead class="bg-warning text-white" >
+        <tr>
+        <th class="bg-warning-subtle text-dark text-center ">Specialization Code</th>
+
+        <th class="bg-warning-subtle text-dark text-center ">Specialization Name</th>
+        <th class="bg-warning-subtle text-dark text-center">Action</th>
+
+    </tr>
+    </thead>
+
+    <tbody class="bg-danger-subtle text-center">
+
+        <tr *ngFor="let s of serv.specializationList">
+
+            <td >{{s.SpecializationCode}}</td>
+
+            <td >{{s.SpecializationName}}</td>
+            <td><Button class="btn btn-primary" (click)="getDoctorsBySpecializations(s.SpecializationCode)">View Doctors</Button></td>
+        </tr>
+
+    </tbody>
+
+</table>
+</div>
+
+</div>
+
+</div>
+</div>
+

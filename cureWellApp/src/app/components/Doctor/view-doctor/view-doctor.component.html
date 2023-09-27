@@ -1,0 +1,36 @@
+
+
+<app-nav></app-nav>
+
+
+
+<div class="container">
+    <div class="row m-5">
+        <div class="col m-5 ">
+            <h1 class="text-center text-white"><b>View Doctor</b></h1>
+            <div class="table-responsive mt-5">
+                <table class="table custom-table  ">
+                    <thead class="bg-warning text-white">
+                        <tr>
+                            <th class="bg-warning-subtle text-dark text-center">Doctor Id</th>
+                            <th class="bg-warning-subtle text-dark text-center">Doctor Name</th>
+                            <th class="bg-warning-subtle text-dark text-center">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-danger-subtle text-center">
+                        <tr *ngFor="let p of serv.dList">
+                            <td (click)="fillForm(p)">{{ p.DoctorId }}</td>
+                            <td>{{ p.DoctorName }}</td>
+                            <td>
+                                <button class="btn btn-primary" [routerLink]="['/updateDoc', p.DoctorId]">Edit</button>
+                                <button class="btn " (click)="delDoctor(p.DoctorId) ">
+                                    <i class="fa fa-trash bg-danger text-white"></i> 
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

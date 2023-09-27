@@ -1,0 +1,71 @@
+<app-nav></app-nav>
+
+<div class="container">
+  <div class="row m-5">
+    <div class="col m-5">
+      <h1 class="text-center text-white">
+        <b>View Today's Surgery Details</b>
+      </h1>
+      <div class="text-center">
+        <button class="btn btn-primary" [routerLink]="['/add-surgery']">
+          Add Surgery
+        </button>
+      </div>
+      <div class="table-responsive mt-5">
+        <table class="table custom-table">
+          <thead class="bg-warning text-white">
+            <tr>
+              <th class="bg-warning-subtle text-dark text-center">
+                Surgery Id
+              </th>
+
+              <th class="bg-warning-subtle text-dark text-center">Doctor Id</th>
+
+              <th class="bg-warning-subtle text-dark text-center">
+                Surgery Date
+              </th>
+
+              <th class="bg-warning-subtle text-dark text-center">
+                Start Time
+              </th>
+
+              <th class="bg-warning-subtle text-dark text-center">End Time</th>
+
+              <th class="bg-warning-subtle text-dark text-center">
+                Surgery Category
+              </th>
+
+              <th class="bg-warning-subtle text-dark text-center">Action</th>
+            </tr>
+          </thead>
+
+          <tbody class="bg-danger-subtle text-center">
+            <tr *ngFor="let s of serv.surgeryList">
+              <td>{{ s.SurgeryId }}</td>
+
+              <td>{{ s.DoctorId }}</td>
+
+              <td>{{ s.SurgeryDate | date : "yyyy-MM-dd" }}</td>
+
+              <td>{{ s.StartTime }}</td>
+
+              <td>{{ s.EndTime }}</td>
+
+              <td>{{ s.SurgeryCategory }}</td>
+
+              <td>
+                <button
+                  class="btn btn-primary"
+                  [routerLink]="['/updatesurgery', s.SurgeryId]"
+                  type="submit"
+                >
+                  Edit Surgery Time
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

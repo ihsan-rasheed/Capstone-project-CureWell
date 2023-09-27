@@ -1,0 +1,142 @@
+<!-- 
+<div class="container-fluid bg-dark py-5 mt-6">
+
+    <div class="row">
+
+        <div class="col-md-12 text-centre">
+
+            <h1 class="display-4 text-white text-center">Welcome to CureWell Hospital</h1>
+
+            <p class="lead text-center text-white ">Your Trusted Partner in Healthcare</p>
+
+            <p class="text-white text-center display-7">Welcome to CureWell Hospital.<br> We are your trusted partner in
+                healthcare.
+
+                Our mission is to provide the highest quality medical care and support to our patients. <br>With a team
+                of dedicated healthcare professionals and state-of-the-art facilities, we strive to ensure your
+                well-being. We are committed to your health and look forward to serving you</p>
+
+
+
+        </div>
+
+        <div class="col-md-6">
+
+            <div class="container">
+
+                <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+
+                    <h2 class="form-signin-heading display-6 text-white ">Login</h2>
+
+                    <div *ngIf="invalidLogin" class="alert alert-danger">Invalid username or password.</div>
+
+                    <br />
+
+                    <label for="username" class="sr-only text-white">User Name</label>
+
+                    <input type="email" id="username" name="username " [(ngModel)]="credentials.userName"
+                        class="form-control" placeholder="User Name" required>
+
+                    <br />
+
+                    <label for="password" class="sr-only text-white">Password</label>
+
+                    <input type="password" id="password" name="password" [(ngModel)]="credentials.Password"
+                        class="form-control" placeholder="Password" required>
+
+                    <br />
+
+                    <button class="btn btn-lg btn-primary" type="submit" [disabled]="!loginForm.valid">Log in</button>
+
+                </form>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</div> -->
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <title>CureWell Hospital</title>
+
+</head>
+
+<body>
+
+    <app-nav></app-nav>
+
+    <div class="container-fluid">
+
+        <div class=" m-3 justify-content-lg-start" style="width: 30%; left: 35%; position: relative;">
+
+            <div class="login-container">
+
+                <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+
+                    <h2 class="form-signin-heading display-4 welcome-text text-center">Welcome to CureWell Hospital</h2>
+
+                    <p class="lead text-center text-muted">Your Trusted Partner in Healthcare</p>
+
+                    <div *ngIf="invalidLogin" class="alert alert-danger">Invalid username or password.</div>
+
+                    <div class="form-group">
+
+                        <label for="username" class="sr-only">User Name</label>
+
+                        <input type="email" id="username" name="username" [(ngModel)]="credentials.userName"
+
+                            class="form-control" placeholder="User Name" required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="password" class="sr-only">Password</label>
+
+                        <input type="password" id="password" name="password" [(ngModel)]="credentials.Password"
+
+                            class="form-control" placeholder="Password" required>
+
+                    </div>
+
+                    <button class="btn btn-lg btn-primary btn-block" type="submit"
+
+                        [disabled]="!loginForm.valid">Log in</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+ 
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

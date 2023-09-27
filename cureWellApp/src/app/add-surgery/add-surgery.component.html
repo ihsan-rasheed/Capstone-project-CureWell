@@ -1,0 +1,113 @@
+<app-nav></app-nav>
+
+<div class="container">
+  <div class="row m-5">
+    <div class="col m-5">
+      <h1 class="text-center text-white"><b>Add New Surgery </b></h1>
+
+      <p class="text-white text-center">
+        <b>All fields are mandatory</b>
+      </p>
+
+      <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+        <div class="form-group m-5">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text bg-warning-subtle">
+                <label><b>Doctor Id</b></label>
+
+                <input
+                  required="true"
+                  name="DoctorId"
+                  #DoctorId="ngModel"
+                  [(ngModel)]="objService.SurgeryData.DoctorId"
+                  placeholder="Doctor Id"
+                  class="form-control"
+                />
+              </div>
+
+              <div class="input-group-text bg-warning-subtle">
+                <label><b>Surgery Date</b></label>
+
+                <input
+                type="date"
+                  required="true"
+                  name="SurgeryDate"
+                  #SurgeryId="ngModel"
+                  [(ngModel)]="objService.SurgeryData.SurgeryDate"
+                  placeholder="Surgery Date"
+                  class="form-control"
+                />
+              </div>
+
+              <div class="input-group-text bg-warning-subtle">
+                <label><b>Start Time(24 hours Format)</b></label>
+                <input
+                  required="true"
+                  name="StartTime"
+                  #StartTime="ngModel"
+                  [(ngModel)]="objService.SurgeryData.StartTime"
+                  placeholder="Start Time"
+                  class="form-control"
+                />
+                <div
+                  *ngIf="
+                    StartTime.invalid && (StartTime.dirty || StartTime.touched)
+                  "
+                  class="text-danger"
+                >
+                  Start Time is required.
+                </div>
+              </div>
+
+              <div class="input-group-text bg-warning-subtle">
+                <label><b>End Time(24 hours Format)</b></label>
+
+                <input
+                  required="true"
+                  name="EndTime"
+                  #EndTime="ngModel"
+                  [(ngModel)]="objService.SurgeryData.EndTime"
+                  placeholder="End Time"
+                  class="form-control"
+                />
+
+                <div
+                  *ngIf="EndTime.invalid && (EndTime.dirty || EndTime.touched)"
+                  class="text-danger"
+                >
+                  End Time is required.
+                </div>
+              </div>
+
+              <div class="input-group-text bg-warning-subtle">
+                <label><b>Surgery Category</b></label>
+
+                <input
+                  required="true"
+                  name="SurgeryCategory"
+                  #SurgeryId="ngModel"
+                  [(ngModel)]="objService.SurgeryData.SurgeryCategory"
+                  placeholder="Surgery Category"
+                  class="form-control"
+                />
+              </div>
+
+              <button
+                class="btn btn-primary"
+                type="submit"
+                [disabled]="form.invalid"
+              >
+                Add
+              </button>
+
+              <a href="/viewtodayssurgery">Cancel</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group"></div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+/* Background color for the entire page */
+body {
+    background-color: #81cfff; /* Pale blue background color */
+    
+}
+
+h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight:900;
+}
+
+/* Custom table styles */
+.custom-table {
+    border-collapse: separate;
+    border-radius: 10px; /* Adjust the corner radius as needed */
+    background-color: #ffffff; /* White background for the table */
+    /* border: 1px solid #ddd; */
+}
+
+.custom-table th, .custom-table td {
+    /* border: 1px solid #ddd; */
+    padding: 10px;
+    color: #333; /* Dark text color for table content */
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+/* Add shadows to the table for depth */
+.custom-table {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style buttons for consistency */
+.btn-primary {
+    background-color: #5a83bc;
+    color: whitesmoke;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+
+
+

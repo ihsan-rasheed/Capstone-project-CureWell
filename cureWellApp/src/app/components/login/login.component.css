@@ -1,0 +1,94 @@
+
+/* body{
+
+    background-image: url("https://images.unsplash.com/photo-1628771065518-0d82f1938462?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
+
+    background-size: cover;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+    overflow: hidden;
+
+} */
+
+/* Style the login container */
+
+.container-fluid{
+    background-image: url("assets/images/blurred-image.jpg");
+
+    background-size: cover;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+    overflow: hidden; 
+
+    top:20%;
+    position: relative;
+
+    height: 100%;
+
+}
+
+.login-container {
+
+    background-color: #fff; /* White background */
+
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+    padding: 20px;
+
+    height: 100%;
+
+}
+
+ 
+
+/* Style the welcome text */
+
+.welcome-text {
+
+    font-size: 28px;
+
+    color: darkblue; /* Hospital green text color */
+
+}
+
+ 
+
+/* Add colorful styling */
+
+.btn-primary {
+
+    background-color: #32a897; /* Hospital green background color */
+
+    border-color: #32a897; /* Hospital green border color */
+
+}
+
+ 
+
+.btn-primary:hover {
+
+    background-color: #298e81; /* Darker green on hover */
+
+    border-color: #298e81;
+
+}
+
+ 
+
+/* Style the alert */
+
+.alert {
+
+    background-color: #ff6b6b; /* Red alert background color */
+
+    color: #fff; /* White text color */
+
+}

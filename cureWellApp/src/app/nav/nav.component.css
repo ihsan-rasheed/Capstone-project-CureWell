@@ -1,0 +1,39 @@
+nav{
+
+    background-color: #ffaaaf;
+
+    font-family: 'Montserrat',sans-serif;
+
+    color: white;
+
+}
+
+ul{
+
+    justify-content: space-between;
+
+    font-family: 'Raleway', sans-serif;
+
+    font-size: large;
+
+}
+
+ 
+
+h1{
+
+    font-family: 'Pacifico', cursive;
+
+}
+
+.nav-link:hover{
+
+    color: #75bffa;
+
+}
+
+.nav-link{
+
+    color: white;
+
+}

@@ -1,0 +1,69 @@
+<app-nav></app-nav>
+
+<div class="container">
+  <div class="row m-5">
+    <div class="col m-5">
+      <h1 class="text-center text-white"><b>Add a New Specialization</b></h1>
+
+      <form #form="ngForm" autocomplete="off" (submit)="insertRecord(form)">
+        <div class="input-group-text bg-white mt-5 bg-warning-subtle">
+          <label class="m-2"><b>Specialization Code</b></label>
+
+          <input
+            required="true"
+            name="specializationCode"
+            #SpecializationCode="ngModel"
+            [(ngModel)]="objService.sData.SpecializationCode"
+            placeholder="Specialization Code"
+            class="form-control"
+          />
+
+          <div
+            *ngIf="
+              SpecializationCode.invalid &&
+              (SpecializationCode.dirty || SpecializationCode.touched)
+            "
+            class="text-danger"
+          >
+            Code is required.
+          </div>
+        </div>
+
+        <div class="input-group-text bg-white bg-warning-subtle">
+          <label class="m-2"><b>Specialization Name</b></label>
+
+          <input
+            required="true"
+            name="specializationName"
+            #SpecializationName="ngModel"
+            [(ngModel)]="objService.sData.SpecializationName"
+            placeholder="Specialization Name"
+            class="form-control"
+          />
+
+          <div
+            *ngIf="
+              SpecializationName.invalid &&
+              (SpecializationName.dirty || SpecializationName.touched)
+            "
+            class="text-danger"
+          >
+            Specialization Name is required.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <button
+            class="m-4 btn btn-primary"
+            type="submit "
+            [disabled]="form.invalid"
+          >
+            Add Specialization
+          </button>
+
+          <a href="/viewspecialization">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
