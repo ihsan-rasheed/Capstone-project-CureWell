@@ -13,31 +13,6 @@ import { ResponseToken } from 'src/app/_interface/response-token.model';
 })
 export class LoginComponent {
 
-  constructor(private http:HttpClient,private router:Router,private auth:AuthServiceService){}
+  constructor(public auth:AuthServiceService){}
 
-
-  invalidLogin:boolean
-  credentials:Admin = {userName:'',Password:''}
-
-  login(form:NgForm)  {
-    if(form.valid){
-      this.http.post<ResponseToken>("http://localhost:5075/api/Auth/login",this.credentials,{
-        headers: new HttpHeaders({ "Content-Type": "application/json"})
-      })
-      .subscribe({
-        next: (res:ResponseToken) => {
-          const token = res;
-          localStorage.setItem('jwt', token.Token); 
-          this.invalidLogin=false;
-          this.router.navigate(["doctor"]);
-
-          const tokenstring = localStorage.getItem('jwt');
-console.log('Token:', tokenstring);
-
-        },
-        error:  (err: HttpErrorResponse) => this.invalidLogin = true
-      })
-      
-    }
-  }
 }

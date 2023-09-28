@@ -13,15 +13,10 @@ export class ViewDoctorComponent implements OnInit {
     this.serv.getDoctors();
   }
 
-  fillForm(selectedP) {
-
-    this.serv.dData = Object.assign({}, selectedP);
-
-  }
 
   delDoctor(id) {
 
-    if (confirm('Are you sure to delete this Product?')) {
+    if (confirm('Are you sure to delete this Doctor?')) {
       this.serv.deleteDoctor(id).subscribe(res => {
         this.serv.getDoctors();
         alert('Doctor Removed');

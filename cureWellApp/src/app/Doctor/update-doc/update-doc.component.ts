@@ -16,7 +16,7 @@ export class UpdateDocComponent {
     this.route.params.subscribe((params) => {
       const doctorId = +params['id'];
       this.objService.getDoctorById(doctorId).subscribe((doctor) => {
-        this.objService.dData = doctor; // Assuming this is how you set the form data
+        this.objService.dData = doctor; 
       });
     });
     this.resetForm();

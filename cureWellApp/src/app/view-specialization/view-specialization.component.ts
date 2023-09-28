@@ -16,13 +16,7 @@ export class ViewSpecializationComponent implements OnInit {
     this.serv.specialization_List();
   }
 
-  getDoctorsBySpecializations(specialization: string) {
-    const apiUrl = `${this.serv.apiUrl3}/GetDoctorsBySpecialization/${specialization}`;
-    this.objHttp.get<Doctor[]>(apiUrl).toPromise().then(res => this.serv.dspecializationList = res as Doctor[]);
-    this.router.navigate(["doctorSpecialization"]);
-    this.serv.DoctorSpecializationName=specialization;
-
-  }
+  
   addSpecialization(){
     this.router.navigate(["add-specialization"]);
   }

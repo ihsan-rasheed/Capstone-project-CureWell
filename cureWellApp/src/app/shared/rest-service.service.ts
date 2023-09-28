@@ -5,13 +5,14 @@ import { Observable } from 'rxjs/internal/Observable';
 import { Specialization } from './specialization.model';
 import { Surgery } from './surgery.model';
 import { DoctorSpecialization } from './doctor-specialization.model';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RestServiceService {
 
-  constructor(private objHttp:HttpClient) { }
+  constructor(private objHttp:HttpClient,private router :Router) { }
 
   dData:Doctor=new Doctor();
   sData:Specialization=new Specialization();
@@ -61,6 +62,14 @@ export class RestServiceService {
   specialization_List()
   {
     this.objHttp.get(this.apiUrl2).toPromise().then(res=>this.specializationList=res as Specialization[]);
+  }
+
+  getDoctorsBySpecializations(specialization: string) {
+    const apiUrl = `${this.apiUrl3}/GetDoctorsBySpecialization/${specialization}`;
+    this.objHttp.get<Doctor[]>(apiUrl).toPromise().then(res => this.dspecializationList = res as Doctor[]);
+    this.router.navigate(["doctorSpecialization"]);
+    this.DoctorSpecializationName=specialization;
+
   }
 
   addSpecialization()

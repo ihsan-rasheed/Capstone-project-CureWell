@@ -19,7 +19,7 @@ export class UpdateSurgeryComponent {
       const surgeryId = +params['id'];
 
       this.objService.getSurgeryById(surgeryId).subscribe((surgery) => {
-        this.objService.SurgeryData = surgery; // Assuming this is how you set the form data
+        this.objService.SurgeryData = surgery; 
       });
     });
 

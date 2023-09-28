@@ -19,7 +19,7 @@
                     </thead>
                     <tbody class="bg-danger-subtle text-center">
                         <tr *ngFor="let p of serv.dList">
-                            <td (click)="fillForm(p)">{{ p.DoctorId }}</td>
+                            <td >{{ p.DoctorId }}</td>
                             <td>{{ p.DoctorName }}</td>
                             <td>
                                 <button class="btn btn-primary" [routerLink]="['/updateDoc', p.DoctorId]">Edit</button>

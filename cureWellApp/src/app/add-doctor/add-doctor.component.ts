@@ -23,9 +23,7 @@ export class AddDoctorComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-    if (this.objService.dData.DoctorId == 0) {
       this.insertRecord(form);
-    }
   }
 
   insertRecord(form: NgForm) {
